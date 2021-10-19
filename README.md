@@ -10,3 +10,12 @@ To get the library, just clone the repository :
 
 ## Description
 
+The library provides an interface which allows the user to communicate with an ABB Robot thanks to RWS.
+
+### Warnings
+
+This library has only been tested on the robot YuMi (IRB14000) and for RWS version 1.0
+
+Also, the the documentation contains a few bugs that need to be fixed. 
+
+Some updates and improvements have to be done. 
