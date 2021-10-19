@@ -1,0 +1,7 @@
+rws\_interface module
+=====================
+
+.. automodule:: rws_interface
+    :members:
+    :undoc-members:
+    :show-inheritance:

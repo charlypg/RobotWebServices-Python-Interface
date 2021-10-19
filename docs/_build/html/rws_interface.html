@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>rws_interface module &mdash; Robot Web Services client  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="http_client module" href="http_client.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Robot Web Services client
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">rwsABBYuMi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="http_client.html">http_client module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">rws_interface module</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robot Web Services client</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">rwsABBYuMi</a> &raquo;</li>
+        
+      <li>rws_interface module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/rws_interface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-rws_interface">
+<span id="rws-interface-module"></span><h1>rws_interface module<a class="headerlink" href="#module-rws_interface" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="rws_interface.RWSInterface">
+<em class="property">class </em><code class="descclassname">rws_interface.</code><code class="descname">RWSInterface</code><span class="sig-paren">(</span><em>rws_server_address</em>, <em>username='Default User'</em>, <em>password='robotics'</em><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a simple interface for a user who aims to build his/her 
+own application.</p>
+<p>It contains documented methods, each having a name corresponding to what it does.</p>
+<dl class="method">
+<dt id="rws_interface.RWSInterface.close_http_session">
+<code class="descname">close_http_session</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.close_http_session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_controller_actions">
+<code class="descname">get_controller_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_controller_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_controller_resources">
+<code class="descname">get_controller_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_controller_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_file_service_resources">
+<code class="descname">get_file_service_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_file_service_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_rapid_execution_actions">
+<code class="descname">get_rapid_execution_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_rapid_execution_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_rapid_execution_state">
+<code class="descname">get_rapid_execution_state</code><span class="sig-paren">(</span><em>continue_on_err='None'</em><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_rapid_execution_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>continue_on_err</strong> – [‘1’, ‘0’, ‘None’]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_rapid_system_resources">
+<code class="descname">get_rapid_system_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_rapid_system_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_robotware_services">
+<code class="descname">get_robotware_services</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_robotware_services" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_service_list">
+<code class="descname">get_service_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_service_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the services list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_subscription_actions">
+<code class="descname">get_subscription_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_subscription_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns possible actions with the subscription service</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_user_actions">
+<code class="descname">get_user_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_user_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>user actions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.get_user_resources">
+<code class="descname">get_user_resources</code><span class="sig-paren">(</span><em>user_type='None'</em><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.get_user_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns user ressources</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user_type</strong> – [‘self’, ‘None’]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.logout">
+<code class="descname">logout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.logout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs logging out</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.reset_rapid_program_pointer_to_main">
+<code class="descname">reset_rapid_program_pointer_to_main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.reset_rapid_program_pointer_to_main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the program pointer (RAPID) to main procedure (PROC main)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.start_rapid_execution">
+<code class="descname">start_rapid_execution</code><span class="sig-paren">(</span><em>regain='continue'</em>, <em>execmode='continue'</em>, <em>cycle='once'</em>, <em>condition='none'</em>, <em>stopatbp='disabled'</em>, <em>alltaskbytsp='false'</em><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.start_rapid_execution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>regain</strong> – [‘continue’, ‘regain’, ‘clear’]</li>
+<li><strong>execmode</strong> – [‘continue’, ‘stepin’, ‘stepover’, ‘stepout’, ‘stepback’, ‘steplast’, ‘stepmotion’]</li>
+<li><strong>cycle</strong> – [‘forever’, ‘asis’, ‘once’]</li>
+<li><strong>condition</strong> – [‘none’, ‘callchain’]</li>
+<li><strong>stopatbp</strong> – [‘disabled’, ‘enabled’]</li>
+<li><strong>alltaskbytsp</strong> – [‘true’, ‘false’]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.start_rapid_execution_from_prod_entry">
+<code class="descname">start_rapid_execution_from_prod_entry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.start_rapid_execution_from_prod_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a RAPID execution from a production entry</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.stop_rapid_execution">
+<code class="descname">stop_rapid_execution</code><span class="sig-paren">(</span><em>stopmode='stop'</em>, <em>usetsp='normal'</em><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.stop_rapid_execution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops a RAPID execution</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stopmode</strong> – [‘cycle’, ‘instr’, ‘stop’, ‘qstop’]</li>
+<li><strong>usetsp</strong> – [‘normal’, ‘alltsk’]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.subscribe_on_resources">
+<code class="descname">subscribe_on_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.subscribe_on_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribe on resources</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rws_interface.RWSInterface.update_rapid_variable_current_value">
+<code class="descname">update_rapid_variable_current_value</code><span class="sig-paren">(</span><em>task</em>, <em>module</em>, <em>variable</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#rws_interface.RWSInterface.update_rapid_variable_current_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the current value of a RAPID variable</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> – [‘boolean’, ‘num’, ‘string’]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="http_client.html" class="btn btn-neutral float-left" title="http_client module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Charly PECQUEUX--GUEZENEC.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

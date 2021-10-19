@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>rws_client module &mdash; Robot Web Services client  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="rws_client_thread module" href="rws_client_thread.html" />
+    <link rel="prev" title="robot_web_socket_client module" href="robot_web_socket_client.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Robot Web Services client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">rwsABBYuMi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="http_client.html">http_client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="listener.html">listener module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robot_web_socket_client.html">robot_web_socket_client module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">rws_client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rws_client_thread.html">rws_client_thread module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rws_client_thread_example.html">rws_client_thread_example module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robot Web Services client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">rwsABBYuMi</a> &raquo;</li>
+      <li>rws_client module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/rws_client.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-rws_client">
+<span id="rws-client-module"></span><h1>rws_client module<a class="headerlink" href="#module-rws_client" title="Permalink to this headline"></a></h1>
+<p>Copyright (c) 2021 Charly PECQUEUX–GUÉZÉNEC</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="rws_client.RWSClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">rws_client.</span></span><span class="sig-name descname"><span class="pre">RWSClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rws_server_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Default</span> <span class="pre">User'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'robotics'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a simple interface for a user who aims to build his/her 
+own application.</p>
+<p>It contains documented methods, each having a name corresponding to what it does.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.close_http_session">
+<span class="sig-name descname"><span class="pre">close_http_session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.close_http_session" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_controller_actions">
+<span class="sig-name descname"><span class="pre">get_controller_actions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_controller_actions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns actions available on controller resources</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_controller_resources">
+<span class="sig-name descname"><span class="pre">get_controller_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_controller_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Returns controller resources</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_file_service_resources">
+<span class="sig-name descname"><span class="pre">get_file_service_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_file_service_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Returns file service resources</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_rapid_execution_actions">
+<span class="sig-name descname"><span class="pre">get_rapid_execution_actions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_rapid_execution_actions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns available actions on RAPID execution</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_rapid_execution_state">
+<span class="sig-name descname"><span class="pre">get_rapid_execution_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">continue_on_err</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'None'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_rapid_execution_state" title="Permalink to this definition"></a></dt>
+<dd><p>Returns RAPID execution state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>continue_on_err</strong> – Continue on error [‘1’, ‘0’, ‘None’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_rapid_system_resources">
+<span class="sig-name descname"><span class="pre">get_rapid_system_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_rapid_system_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Returns RAPID resources</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_rapid_variable_data">
+<span class="sig-name descname"><span class="pre">get_rapid_variable_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_rapid_variable_data" title="Permalink to this definition"></a></dt>
+<dd><p>Returns RAPID variable state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> – RAPID task wherin the variable is defined []</p></li>
+<li><p><strong>module</strong> – RAPID module wherin the variable is defined []</p></li>
+<li><p><strong>variable</strong> – Name of the RAPID variable []</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_robotware_services">
+<span class="sig-name descname"><span class="pre">get_robotware_services</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_robotware_services" title="Permalink to this definition"></a></dt>
+<dd><p>Returns robotware services</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_service_list">
+<span class="sig-name descname"><span class="pre">get_service_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_service_list" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the services list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_subscription_actions">
+<span class="sig-name descname"><span class="pre">get_subscription_actions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_subscription_actions" title="Permalink to this definition"></a></dt>
+<dd><p>Returns possible actions with the subscription service</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_user_actions">
+<span class="sig-name descname"><span class="pre">get_user_actions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_user_actions" title="Permalink to this definition"></a></dt>
+<dd><p>user actions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.get_user_resources">
+<span class="sig-name descname"><span class="pre">get_user_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'None'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.get_user_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Returns user ressources</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user_type</strong> – Type of user [‘self’, ‘None’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.logout">
+<span class="sig-name descname"><span class="pre">logout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.logout" title="Permalink to this definition"></a></dt>
+<dd><p>Performs logging out</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.reset_rapid_program_pointer_to_main">
+<span class="sig-name descname"><span class="pre">reset_rapid_program_pointer_to_main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.reset_rapid_program_pointer_to_main" title="Permalink to this definition"></a></dt>
+<dd><p>Resets the program pointer (RAPID) to main procedure (PROC main). The robot has to be in ‘Auto’ mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.start_rapid_execution">
+<span class="sig-name descname"><span class="pre">start_rapid_execution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'continue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'continue'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'once'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'none'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stopatbp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'disabled'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alltaskbytsp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'false'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.start_rapid_execution" title="Permalink to this definition"></a></dt>
+<dd><p>Starts a RAPID execution. The robot has to be in ‘Auto’ mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regain</strong> – Regain [‘continue’, ‘regain’, ‘clear’]</p></li>
+<li><p><strong>execmode</strong> – Execution mode [‘continue’, ‘stepin’, ‘stepover’, ‘stepout’, ‘stepback’, ‘steplast’, ‘stepmotion’]</p></li>
+<li><p><strong>cycle</strong> – Cycle [‘forever’, ‘asis’, ‘once’]</p></li>
+<li><p><strong>condition</strong> – Condition [‘none’, ‘callchain’]</p></li>
+<li><p><strong>stopatbp</strong> – Stop execution at breakpoint [‘disabled’, ‘enabled’]</p></li>
+<li><p><strong>alltaskbytsp</strong> – alltaskbytsp [‘true’, ‘false’]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.start_rapid_execution_from_prod_entry">
+<span class="sig-name descname"><span class="pre">start_rapid_execution_from_prod_entry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.start_rapid_execution_from_prod_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Starts a RAPID execution from a production entry</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.stop_rapid_execution">
+<span class="sig-name descname"><span class="pre">stop_rapid_execution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stopmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'stop'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usetsp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'normal'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.stop_rapid_execution" title="Permalink to this definition"></a></dt>
+<dd><p>Stops a RAPID execution. The robot has to be in ‘Auto’ mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stopmode</strong> – Stop mode [‘cycle’, ‘instr’, ‘stop’, ‘qstop’]</p></li>
+<li><p><strong>usetsp</strong> – Use tsp [‘normal’, ‘alltsk’]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.subscribe_on_resources">
+<span class="sig-name descname"><span class="pre">subscribe_on_resources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_resources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.subscribe_on_resources" title="Permalink to this definition"></a></dt>
+<dd><p>Subscribe on resources</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rws_client.RWSClient.update_rapid_variable_current_value">
+<span class="sig-name descname"><span class="pre">update_rapid_variable_current_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'true'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rws_client.RWSClient.update_rapid_variable_current_value" title="Permalink to this definition"></a></dt>
+<dd><p>Update the current value of a RAPID variable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> – RAPID task wherin the variable is defined []</p></li>
+<li><p><strong>module</strong> – RAPID module wherin the variable is defined []</p></li>
+<li><p><strong>variable</strong> – Name of the RAPID variable []</p></li>
+<li><p><strong>value</strong> – Value to be written [‘boolean’, ‘num’, ‘string’]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="robot_web_socket_client.html" class="btn btn-neutral float-left" title="robot_web_socket_client module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rws_client_thread.html" class="btn btn-neutral float-right" title="rws_client_thread module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Charly PECQUEUX--GUEZENEC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

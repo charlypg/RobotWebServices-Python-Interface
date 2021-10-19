@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>http_client module &mdash; Robot Web Services client  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="listener module" href="listener.html" />
+    <link rel="prev" title="rwsABBYuMi" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Robot Web Services client
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">rwsABBYuMi</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">http_client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="listener.html">listener module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="robot_web_socket_client.html">robot_web_socket_client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rws_client.html">rws_client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rws_client_thread.html">rws_client_thread module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rws_client_thread_example.html">rws_client_thread_example module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Robot Web Services client</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">rwsABBYuMi</a> &raquo;</li>
+      <li>http_client module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/http_client.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-http_client">
+<span id="http-client-module"></span><h1>http_client module<a class="headerlink" href="#module-http_client" title="Permalink to this headline"></a></h1>
+<p>Copyright (c) 2021 Charly PECQUEUX–GUÉZÉNEC</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="http_client.HTTPClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">http_client.</span></span><span class="sig-name descname"><span class="pre">HTTPClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rws_server_address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Default</span> <span class="pre">User'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'robotics'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The HTTPClient class implements an HTTP client for RWS. It builds requests 
+from raw data.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="http_client.HTTPClient.DEBUG">
+<span class="sig-name descname"><span class="pre">DEBUG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#http_client.HTTPClient.DEBUG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="http_client.HTTPClient.HTTP_STATUS_CODES">
+<span class="sig-name descname"><span class="pre">HTTP_STATUS_CODES</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'200':</span> <span class="pre">'HTTP_OK(200)</span> <span class="pre">Standard</span> <span class="pre">response</span> <span class="pre">for</span> <span class="pre">successful</span> <span class="pre">HTTP</span> <span class="pre">requests',</span> <span class="pre">'201':</span> <span class="pre">'CREATED(201)</span> <span class="pre">The</span> <span class="pre">request</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">fulfilled,</span> <span class="pre">and</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">resource</span> <span class="pre">is</span> <span class="pre">created',</span> <span class="pre">'202':</span> <span class="pre">'ACCEPTED(202)</span> <span class="pre">The</span> <span class="pre">request</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">accepted</span> <span class="pre">for</span> <span class="pre">processing,</span> <span class="pre">but</span> <span class="pre">the</span> <span class="pre">processing</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">been</span> <span class="pre">completed',</span> <span class="pre">'204':</span> <span class="pre">'NO_CONTENT(204)</span> <span class="pre">The</span> <span class="pre">request</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">successfully</span> <span class="pre">processed,</span> <span class="pre">but</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">returning</span> <span class="pre">any</span> <span class="pre">content',</span> <span class="pre">'301':</span> <span class="pre">'MOVED_PERMANENTLY(301)</span> <span class="pre">The</span> <span class="pre">requested</span> <span class="pre">page</span> <span class="pre">has</span> <span class="pre">moved</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">URL',</span> <span class="pre">'304':</span> <span class="pre">'NOT_MODIFIED(304)</span> <span class="pre">Indicates</span> <span class="pre">the</span> <span class="pre">requested</span> <span class="pre">page</span> <span class="pre">has</span> <span class="pre">not</span> <span class="pre">been</span> <span class="pre">modified</span> <span class="pre">since</span> <span class="pre">last</span> <span class="pre">requested',</span> <span class="pre">'400':</span> <span class="pre">'BAD_REQUEST(400)</span> <span class="pre">The</span> <span class="pre">request</span> <span class="pre">cannot</span> <span class="pre">be</span> <span class="pre">fulfilled</span> <span class="pre">due</span> <span class="pre">to</span> <span class="pre">bad</span> <span class="pre">syntax',</span> <span class="pre">'401':</span> <span class="pre">'UNAUTHORIZED(401)</span> <span class="pre">The</span> <span class="pre">request</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">legal</span> <span class="pre">request,</span> <span class="pre">but</span> <span class="pre">the</span> <span class="pre">server</span> <span class="pre">is</span> <span class="pre">refusing</span> <span class="pre">to</span> <span class="pre">respond</span> <span class="pre">to</span> <span class="pre">it.</span> <span class="pre">For</span> <span class="pre">use</span> <span class="pre">when</span> <span class="pre">authentication</span> <span class="pre">is</span> <span class="pre">possible</span> <span class="pre">but</span> <span class="pre">has</span> <span class="pre">failed</span> <span class="pre">or</span> <span class="pre">not</span> <span class="pre">yet</span> <span class="pre">been</span> <span class="pre">provided',</span> <span class="pre">'403':</span> <span class="pre">'FORBIDDEN(403)</span> <span class="pre">The</span> <span class="pre">request</span> <span class="pre">was</span> <span class="pre">a</span> <span class="pre">legal</span> <span class="pre">request,</span> <span class="pre">but</span> <span class="pre">the</span> <span class="pre">server</span> <span class="pre">is</span> <span class="pre">refusing</span> <span class="pre">to</span> <span class="pre">respond</span> <span class="pre">to</span> <span class="pre">it',</span> <span class="pre">'404':</span> <span class="pre">'NOT_FOUND(404)</span> <span class="pre">The</span> <span class="pre">requested</span> <span class="pre">page</span> <span class="pre">could</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">found</span> <span class="pre">but</span> <span class="pre">may</span> <span class="pre">be</span> <span class="pre">available</span> <span class="pre">again</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">future',</span> <span class="pre">'405':</span> <span class="pre">'METHOD_NOT_ALLOWED(405)</span> <span class="pre">A</span> <span class="pre">request</span> <span class="pre">was</span> <span class="pre">made</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">page</span> <span class="pre">using</span> <span class="pre">a</span> <span class="pre">request</span> <span class="pre">method</span> <span class="pre">not</span> <span class="pre">supported</span> <span class="pre">by</span> <span class="pre">that</span> <span class="pre">page',</span> <span class="pre">'410':</span> <span class="pre">'GONE(410)</span> <span class="pre">The</span> <span class="pre">requested</span> <span class="pre">page</span> <span class="pre">is</span> <span class="pre">no</span> <span class="pre">longer</span> <span class="pre">available',</span> <span class="pre">'415':</span> <span class="pre">'UNSUPPORTED_MEDIA(415)</span> <span class="pre">The</span> <span class="pre">server</span> <span class="pre">will</span> <span class="pre">not</span> <span class="pre">accept</span> <span class="pre">the</span> <span class="pre">request,</span> <span class="pre">because</span> <span class="pre">the</span> <span class="pre">media</span> <span class="pre">type</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">supported',</span> <span class="pre">'500':</span> <span class="pre">'INTERNAL_SERVER_ERROR(500)</span> <span class="pre">A</span> <span class="pre">generic</span> <span class="pre">error</span> <span class="pre">message,</span> <span class="pre">given</span> <span class="pre">when</span> <span class="pre">no</span> <span class="pre">more</span> <span class="pre">specific</span> <span class="pre">message</span> <span class="pre">is</span> <span class="pre">suitable',</span> <span class="pre">'501':</span> <span class="pre">'NOT_IMPLEMENTED(501)</span> <span class="pre">The</span> <span class="pre">server</span> <span class="pre">either</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">recognize</span> <span class="pre">the</span> <span class="pre">request</span> <span class="pre">method,</span> <span class="pre">or</span> <span class="pre">it</span> <span class="pre">lacks</span> <span class="pre">the</span> <span class="pre">ability</span> <span class="pre">to</span> <span class="pre">fulfill</span> <span class="pre">the</span> <span class="pre">request',</span> <span class="pre">'503':</span> <span class="pre">'SERVICE_UNAVAILABLE(503)</span> <span class="pre">The</span> <span class="pre">server</span> <span class="pre">is</span> <span class="pre">currently</span> <span class="pre">unavailable</span> <span class="pre">(overloaded</span> <span class="pre">or</span> <span class="pre">down)'}</span></em><a class="headerlink" href="#http_client.HTTPClient.HTTP_STATUS_CODES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="http_client.HTTPClient.REQUESTS_DICTIONARY">
+<span class="sig-name descname"><span class="pre">REQUESTS_DICTIONARY</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'get_controller_actions':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'show'},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">actions</span> <span class="pre">available</span> <span class="pre">on</span> <span class="pre">controller</span> <span class="pre">resources',</span> <span class="pre">'error_response':</span> <span class="pre">[404],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/ctrl'},</span> <span class="pre">'get_controller_resources':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">controller</span> <span class="pre">resources',</span> <span class="pre">'error_response':</span> <span class="pre">[404],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/ctrl'},</span> <span class="pre">'get_file_service_resources':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">file</span> <span class="pre">service</span> <span class="pre">resources',</span> <span class="pre">'error_response':</span> <span class="pre">[401,</span> <span class="pre">404],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/fileservice'},</span> <span class="pre">'get_rapid_execution_actions':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'show'},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">available</span> <span class="pre">actions</span> <span class="pre">on</span> <span class="pre">RAPID</span> <span class="pre">execution',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/execution'},</span> <span class="pre">'get_rapid_execution_state':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">RAPID</span> <span class="pre">execution</span> <span class="pre">state',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{'continue-on-err':</span> <span class="pre">{'default_value':</span> <span class="pre">'None',</span> <span class="pre">'description':</span> <span class="pre">'Continue</span> <span class="pre">on</span> <span class="pre">error',</span> <span class="pre">'possible_values':</span> <span class="pre">['1',</span> <span class="pre">'0',</span> <span class="pre">'None'],</span> <span class="pre">'required':</span> <span class="pre">0}},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/execution'},</span> <span class="pre">'get_rapid_system_resources':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">RAPID</span> <span class="pre">resources',</span> <span class="pre">'error_response':</span> <span class="pre">[401,</span> <span class="pre">404],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid'},</span> <span class="pre">'get_rapid_variable_data':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">RAPID</span> <span class="pre">variable</span> <span class="pre">state',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{'module':</span> <span class="pre">{'default_value':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'RAPID</span> <span class="pre">module</span> <span class="pre">wherin</span> <span class="pre">the</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">defined',</span> <span class="pre">'possible_values':</span> <span class="pre">[],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'task':</span> <span class="pre">{'default_value':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'RAPID</span> <span class="pre">task</span> <span class="pre">wherin</span> <span class="pre">the</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">defined',</span> <span class="pre">'possible_values':</span> <span class="pre">[],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'variable':</span> <span class="pre">{'default_value':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">RAPID</span> <span class="pre">variable',</span> <span class="pre">'possible_values':</span> <span class="pre">[],</span> <span class="pre">'required':</span> <span class="pre">1}},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/symbol/data/RAPID'},</span> <span class="pre">'get_robotware_services':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">robotware</span> <span class="pre">services',</span> <span class="pre">'error_response':</span> <span class="pre">[401,</span> <span class="pre">404],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/rw'},</span> <span class="pre">'get_service_list':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">the</span> <span class="pre">services</span> <span class="pre">list',</span> <span class="pre">'error_response':</span> <span class="pre">[400,</span> <span class="pre">404],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/'},</span> <span class="pre">'get_subscription_actions':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'show'},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">possible</span> <span class="pre">actions</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">subscription</span> <span class="pre">service',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/subscription'},</span> <span class="pre">'get_user_actions':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'show'},</span> <span class="pre">'description':</span> <span class="pre">'user</span> <span class="pre">actions',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/users'},</span> <span class="pre">'get_user_resources':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Returns</span> <span class="pre">user</span> <span class="pre">ressources',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{'user-type':</span> <span class="pre">{'default_value':</span> <span class="pre">'None',</span> <span class="pre">'description':</span> <span class="pre">'Type</span> <span class="pre">of</span> <span class="pre">user',</span> <span class="pre">'possible_values':</span> <span class="pre">['self',</span> <span class="pre">'None'],</span> <span class="pre">'required':</span> <span class="pre">0}},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">200,</span> <span class="pre">'url':</span> <span class="pre">'/users'},</span> <span class="pre">'logout':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Performs</span> <span class="pre">logging</span> <span class="pre">out',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'GET',</span> <span class="pre">'success_response':</span> <span class="pre">204,</span> <span class="pre">'url':</span> <span class="pre">'/logout'},</span> <span class="pre">'reset_rapid_program_pointer_to_main':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'resetpp'},</span> <span class="pre">'description':</span> <span class="pre">&quot;Resets</span> <span class="pre">the</span> <span class="pre">program</span> <span class="pre">pointer</span> <span class="pre">(RAPID)</span> <span class="pre">to</span> <span class="pre">main</span> <span class="pre">procedure</span> <span class="pre">(PROC</span> <span class="pre">main).</span> <span class="pre">The</span> <span class="pre">robot</span> <span class="pre">has</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">in</span> <span class="pre">'Auto'</span> <span class="pre">mode.&quot;,</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'POST',</span> <span class="pre">'success_response':</span> <span class="pre">204,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/execution'},</span> <span class="pre">'start_rapid_execution':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'start'},</span> <span class="pre">'description':</span> <span class="pre">&quot;Starts</span> <span class="pre">a</span> <span class="pre">RAPID</span> <span class="pre">execution.</span> <span class="pre">The</span> <span class="pre">robot</span> <span class="pre">has</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">in</span> <span class="pre">'Auto'</span> <span class="pre">mode.&quot;,</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{'alltaskbytsp':</span> <span class="pre">{'default_value':</span> <span class="pre">'false',</span> <span class="pre">'description':</span> <span class="pre">'alltaskbytsp',</span> <span class="pre">'possible_values':</span> <span class="pre">['true',</span> <span class="pre">'false'],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'condition':</span> <span class="pre">{'default_value':</span> <span class="pre">'none',</span> <span class="pre">'description':</span> <span class="pre">'Condition',</span> <span class="pre">'possible_values':</span> <span class="pre">['none',</span> <span class="pre">'callchain'],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'cycle':</span> <span class="pre">{'default_value':</span> <span class="pre">'once',</span> <span class="pre">'description':</span> <span class="pre">'Cycle',</span> <span class="pre">'possible_values':</span> <span class="pre">['forever',</span> <span class="pre">'asis',</span> <span class="pre">'once'],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'execmode':</span> <span class="pre">{'default_value':</span> <span class="pre">'continue',</span> <span class="pre">'description':</span> <span class="pre">'Execution</span> <span class="pre">mode',</span> <span class="pre">'possible_values':</span> <span class="pre">['continue',</span> <span class="pre">'stepin',</span> <span class="pre">'stepover',</span> <span class="pre">'stepout',</span> <span class="pre">'stepback',</span> <span class="pre">'steplast',</span> <span class="pre">'stepmotion'],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'regain':</span> <span class="pre">{'default_value':</span> <span class="pre">'continue',</span> <span class="pre">'description':</span> <span class="pre">'Regain',</span> <span class="pre">'possible_values':</span> <span class="pre">['continue',</span> <span class="pre">'regain',</span> <span class="pre">'clear'],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'stopatbp':</span> <span class="pre">{'default_value':</span> <span class="pre">'disabled',</span> <span class="pre">'description':</span> <span class="pre">'Stop</span> <span class="pre">execution</span> <span class="pre">at</span> <span class="pre">breakpoint',</span> <span class="pre">'possible_values':</span> <span class="pre">['disabled',</span> <span class="pre">'enabled'],</span> <span class="pre">'required':</span> <span class="pre">1}},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'POST',</span> <span class="pre">'success_response':</span> <span class="pre">204,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/execution'},</span> <span class="pre">'start_rapid_execution_from_prod_entry':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'startprodentry'},</span> <span class="pre">'description':</span> <span class="pre">'Starts</span> <span class="pre">a</span> <span class="pre">RAPID</span> <span class="pre">execution</span> <span class="pre">from</span> <span class="pre">a</span> <span class="pre">production</span> <span class="pre">entry',</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'POST',</span> <span class="pre">'success_response':</span> <span class="pre">204,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/execution'},</span> <span class="pre">'stop_rapid_execution':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'stop'},</span> <span class="pre">'description':</span> <span class="pre">&quot;Stops</span> <span class="pre">a</span> <span class="pre">RAPID</span> <span class="pre">execution.</span> <span class="pre">The</span> <span class="pre">robot</span> <span class="pre">has</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">in</span> <span class="pre">'Auto'</span> <span class="pre">mode.&quot;,</span> <span class="pre">'error_response':</span> <span class="pre">[400],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{'stopmode':</span> <span class="pre">{'default_value':</span> <span class="pre">'stop',</span> <span class="pre">'description':</span> <span class="pre">'Stop</span> <span class="pre">mode',</span> <span class="pre">'possible_values':</span> <span class="pre">['cycle',</span> <span class="pre">'instr',</span> <span class="pre">'stop',</span> <span class="pre">'qstop'],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'usetsp':</span> <span class="pre">{'default_value':</span> <span class="pre">'normal',</span> <span class="pre">'description':</span> <span class="pre">'Use</span> <span class="pre">tsp',</span> <span class="pre">'possible_values':</span> <span class="pre">['normal',</span> <span class="pre">'alltsk'],</span> <span class="pre">'required':</span> <span class="pre">1}},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'POST',</span> <span class="pre">'success_response':</span> <span class="pre">204,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/execution'},</span> <span class="pre">'subscribe_on_resources':</span> <span class="pre">{'default_params':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Subscribe</span> <span class="pre">on</span> <span class="pre">resources',</span> <span class="pre">'error_response':</span> <span class="pre">[400,</span> <span class="pre">415],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'POST',</span> <span class="pre">'success_response':</span> <span class="pre">201,</span> <span class="pre">'url':</span> <span class="pre">'/subscription'},</span> <span class="pre">'update_rapid_variable_current_value':</span> <span class="pre">{'default_params':</span> <span class="pre">{'action':</span> <span class="pre">'set'},</span> <span class="pre">'description':</span> <span class="pre">'Update</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">value</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">RAPID</span> <span class="pre">variable',</span> <span class="pre">'error_response':</span> <span class="pre">[400,</span> <span class="pre">403],</span> <span class="pre">'expected_data_params':</span> <span class="pre">{'value':</span> <span class="pre">{'default_value':</span> <span class="pre">'true',</span> <span class="pre">'description':</span> <span class="pre">'Value</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">written',</span> <span class="pre">'possible_values':</span> <span class="pre">['boolean',</span> <span class="pre">'num',</span> <span class="pre">'string'],</span> <span class="pre">'required':</span> <span class="pre">1}},</span> <span class="pre">'expected_url_complement':</span> <span class="pre">{'module':</span> <span class="pre">{'default_value':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'RAPID</span> <span class="pre">module</span> <span class="pre">wherin</span> <span class="pre">the</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">defined',</span> <span class="pre">'possible_values':</span> <span class="pre">[],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'task':</span> <span class="pre">{'default_value':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'RAPID</span> <span class="pre">task</span> <span class="pre">wherin</span> <span class="pre">the</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">defined',</span> <span class="pre">'possible_values':</span> <span class="pre">[],</span> <span class="pre">'required':</span> <span class="pre">1},</span> <span class="pre">'variable':</span> <span class="pre">{'default_value':</span> <span class="pre">{},</span> <span class="pre">'description':</span> <span class="pre">'Name</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">RAPID</span> <span class="pre">variable',</span> <span class="pre">'possible_values':</span> <span class="pre">[],</span> <span class="pre">'required':</span> <span class="pre">1}},</span> <span class="pre">'expected_url_params':</span> <span class="pre">{},</span> <span class="pre">'method':</span> <span class="pre">'POST',</span> <span class="pre">'success_response':</span> <span class="pre">204,</span> <span class="pre">'url':</span> <span class="pre">'/rw/rapid/symbol/data/RAPID'}}</span></em><a class="headerlink" href="#http_client.HTTPClient.REQUESTS_DICTIONARY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="http_client.HTTPClient.close_session">
+<span class="sig-name descname"><span class="pre">close_session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient.close_session" title="Permalink to this definition"></a></dt>
+<dd><p>Closes the HTTP session</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="http_client.HTTPClient.dict_fusion">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">dict_fusion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receiver_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient.dict_fusion" title="Permalink to this definition"></a></dt>
+<dd><p>Performs the fusion of both dictionaries in argument. If there exists a common key, then
+the receiver dictionary takes the value from the other with this particular key.</p>
+<p>It does not return the reference of the receiver dictionary !</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>receiver_dict</strong> – dict : Reference to the receiver dictionary</p></li>
+<li><p><strong>other_dict</strong> – dict : Reference to the other dictionary</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Nothing</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="http_client.HTTPClient.dict_fusion_return_ref">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">dict_fusion_return_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">receiver_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient.dict_fusion_return_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Performs the fusion of both dictionaries in argument. If there exists a common key, then
+the receiver dictionary takes the value from the other with this particular key.</p>
+<p>This one returns the reference of the receiver dictionary, contrary to ‘dict_fusion’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>receiver_dict</strong> – dict : Reference to the receiver dictionary</p></li>
+<li><p><strong>other_dict</strong> – dict : Reference to the other dictionary</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict : Reference to the receiver dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="http_client.HTTPClient.get_rws_server_url">
+<span class="sig-name descname"><span class="pre">get_rws_server_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient.get_rws_server_url" title="Permalink to this definition"></a></dt>
+<dd><p>Getter : rws_server_url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str : Returns the RWS Server url.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="http_client.HTTPClient.request">
+<span class="sig-name descname"><span class="pre">request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keyword</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_from_interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url_complement</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient.request" title="Permalink to this definition"></a></dt>
+<dd><p>Builds an HTTP request from raw data.</p>
+<p>The keyword corresponds to the desired action, as mentionned above. 
+ex: ‘start_rapid_execution’ in order to start the execution of a 
+program on the robot.</p>
+<p>Some URL parameters are undirectly given by the user, from the interface, 
+under the form of a dictionary : params_from_interface.</p>
+<p>Data can also be sent if necessary. Like parameters, data are given thanks 
+to the ‘data’ dictionary in argument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>keyword</strong> – str : Keyword corresponding to a particular action</p></li>
+<li><p><strong>params_from_interface</strong> – dict : URL parameters</p></li>
+<li><p><strong>data</strong> – dict : Data which will be sent</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Response : The request’s response.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="http_client.HTTPClient.test_get">
+<span class="sig-name descname"><span class="pre">test_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#http_client.HTTPClient.test_get" title="Permalink to this definition"></a></dt>
+<dd><p>Tests GET requests in order to debug the RequestsDictionary.json file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display</strong> – bool : If True then every request’s HTTP status code will be printed</p></li>
+<li><p><strong>display_content</strong> – bool : If True then the response’s content will be also printed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict : A dictionary where keys are the keywords and values are the corresponding responses</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="http_client.extract_json">
+<span class="sig-prename descclassname"><span class="pre">http_client.</span></span><span class="sig-name descname"><span class="pre">extract_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#http_client.extract_json" title="Permalink to this definition"></a></dt>
+<dd><p>Extracts info from a json file under the form of a dictionary.
+It is used to declare HTTPClient’s static variables</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> – str : Name of the json file (or path)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict : Image dictionary of the json file</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="rwsABBYuMi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="listener.html" class="btn btn-neutral float-right" title="listener module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Charly PECQUEUX--GUEZENEC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

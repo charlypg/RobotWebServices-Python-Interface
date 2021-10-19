@@ -1,0 +1,18 @@
+{ 
+"200" : "HTTP_OK(200) Standard response for successful HTTP requests",
+"201" : "CREATED(201) The request has been fulfilled, and a new resource is created",
+"202" : "ACCEPTED(202) The request has been accepted for processing, but the processing has not been completed", 
+"204" : "NO_CONTENT(204) The request has been successfully processed, but is not returning any content", 
+"301" : "MOVED_PERMANENTLY(301) The requested page has moved to a new URL", 
+"304" : "NOT_MODIFIED(304) Indicates the requested page has not been modified since last requested", 
+"400" : "BAD_REQUEST(400) The request cannot be fulfilled due to bad syntax", 
+"401" : "UNAUTHORIZED(401) The request was a legal request, but the server is refusing to respond to it. For use when authentication is possible but has failed or not yet been provided",
+"403" : "FORBIDDEN(403) The request was a legal request, but the server is refusing to respond to it",
+"404" : "NOT_FOUND(404) The requested page could not be found but may be available again in the future",
+"405" : "METHOD_NOT_ALLOWED(405) A request was made of a page using a request method not supported by that page",
+"410" : "GONE(410) The requested page is no longer available",
+"415" : "UNSUPPORTED_MEDIA(415) The server will not accept the request, because the media type is not supported",
+"500" : "INTERNAL_SERVER_ERROR(500) A generic error message, given when no more specific message is suitable",
+"501" : "NOT_IMPLEMENTED(501) The server either does not recognize the request method, or it lacks the ability to fulfill the request",
+"503" : "SERVICE_UNAVAILABLE(503) The server is currently unavailable (overloaded or down)"
+}
