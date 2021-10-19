@@ -1,0 +1,294 @@
+{
+    "get_service_list" :
+    {
+	"url" : "/",
+	"method" : "GET",
+	"expected_url_complement" : {},
+	"expected_url_params" : {},
+	"expected_data_params" : {},
+	"default_params" : {},
+	"success_response" : 200,
+	"error_response" : [400, 404],
+	"description" : "Returns the services list"
+    },
+
+    "logout" :
+    {
+        "url" : "/logout",
+        "method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 204,
+        "error_response" : [400],
+        "description" : "Performs logging out"
+    },
+
+
+
+
+
+    "get_rapid_variable_data" :
+    {
+        "url" : "/rw/rapid/symbol/data/RAPID",
+	"method" : "GET",
+	"expected_url_complement" : 
+	{
+	"task": {"required" : 1, "default_value" : {}, "possible_values" : [], "description" : "RAPID task wherin the variable is defined"}, 
+	"module" : {"required" : 1, "default_value" : {}, "possible_values" : [], "description" : "RAPID module wherin the variable is defined"}, 
+	"variable" : {"required" : 1, "default_value" : {}, "possible_values" : [], "description" : "Name of the RAPID variable"}
+	},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [400],
+        "description" : "Returns RAPID variable state"
+    },
+
+    "update_rapid_variable_current_value" :
+    {
+        "url" : "/rw/rapid/symbol/data/RAPID",
+	"method" : "POST",
+	"expected_url_complement" : 
+	{
+	"task": {"required" : 1, "default_value" : {}, "possible_values" : [], "description" : "RAPID task wherin the variable is defined"}, 
+	"module" : {"required" : 1, "default_value" : {}, "possible_values" : [], "description" : "RAPID module wherin the variable is defined"}, 
+	"variable" : {"required" : 1, "default_value" : {}, "possible_values" : [], "description" : "Name of the RAPID variable"}
+	},
+        "expected_url_params" : {},
+        "expected_data_params" : 
+        {
+        "value" : {"required" : 1, "default_value" : "true", "possible_values" : ["boolean", "num", "string"], "description" : "Value to be written"}
+        },
+        "default_params" : {"action" : "set"},
+        "success_response" : 204,
+        "error_response" : [400, 403],
+        "description" : "Update the current value of a RAPID variable"
+    },
+    
+
+
+
+    "subscribe_on_resources" :
+    {
+        "url" : "/subscription",
+        "method" : "POST",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 201,
+        "error_response" : [400, 415],
+        "description" : "Subscribe on resources"
+    },
+
+    "get_subscription_actions" :
+    {
+        "url" : "/subscription",
+        "method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {"action" : "show"},
+        "success_response" : 200,
+        "error_response" : [400],
+        "description" : "Returns possible actions with the subscription service"
+    },
+
+
+    "get_user_resources" :
+    {
+        "url" : "/users",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {"user-type" : {"required" : 0, "default_value" : "None", "possible_values" : ["self", "None"], "description" : "Type of user"}},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [400],
+        "description" : "Returns user ressources"
+    },
+
+    "get_user_actions" :
+    {
+        "url" : "/users",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {"action" : "show"},
+        "success_response" : 200,
+        "error_response" : [400],
+        "description" : "user actions"
+    },
+
+
+
+
+
+    "get_controller_resources" :
+    {
+        "url" : "/ctrl",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [404],
+        "description" : "Returns controller resources"
+    },
+
+    "get_controller_actions" :
+    {
+        "url" : "/ctrl",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {"action" : "show"},
+        "success_response" : 200,
+        "error_response" : [404],
+        "description" : "Returns actions available on controller resources"
+    },
+
+
+
+
+
+    "get_file_service_resources" :
+    {
+        "url" : "/fileservice",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [401, 404],
+        "description" : "Returns file service resources"
+    },
+
+
+
+
+
+    "get_robotware_services" :
+    {
+        "url" : "/rw",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [401, 404],
+        "description" : "Returns robotware services"
+    },
+
+
+    "get_rapid_system_resources" :
+    {
+        "url" : "/rw/rapid",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [401, 404],
+        "description" : "Returns RAPID resources"
+    },
+
+    "get_rapid_execution_state" :
+    {
+        "url" : "/rw/rapid/execution",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {"continue-on-err" : {"required" : 0, "default_value" : "None", "possible_values" : ["1", "0", "None"], "description" : "Continue on error"}},
+        "expected_data_params" : {},
+        "default_params" : {},
+        "success_response" : 200,
+        "error_response" : [400],
+        "description" : "Returns RAPID execution state"
+    },
+
+    "get_rapid_execution_actions" :
+    {
+        "url" : "/rw/rapid/execution",
+	"method" : "GET",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {"action" : "show"},
+        "success_response" : 200,
+        "error_response" : [400],
+        "description" : "Returns available actions on RAPID execution"
+    },
+
+    "start_rapid_execution" :
+    {
+        "url" : "/rw/rapid/execution",
+	"method" : "POST",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" :
+	{
+        "regain" : {"required" : 1, "default_value" : "continue", "possible_values" : ["continue", "regain", "clear"], "description" : "Regain"},
+         "execmode" : {"required" : 1, "default_value" : "continue", "possible_values" : ["continue", "stepin", "stepover", "stepout", "stepback", "steplast", "stepmotion"], "description" : "Execution mode"},
+         "cycle" : {"required" : 1, "default_value" : "once", "possible_values" : ["forever", "asis", "once"], "description" : "Cycle"},
+         "condition" : {"required" : 1, "default_value" : "none", "possible_values" : ["none", "callchain"], "description" : "Condition"},
+         "stopatbp" : {"required" : 1, "default_value" : "disabled", "possible_values" : ["disabled", "enabled"], "description" : "Stop execution at breakpoint"},
+         "alltaskbytsp" : {"required" : 1, "default_value" : "false", "possible_values" : ["true", "false"], "description" : "alltaskbytsp"} 
+        },
+        "default_params" : {"action" : "start"},
+        "success_response" : 204,
+        "error_response" : [400],
+        "description" : "Starts a RAPID execution. The robot has to be in 'Auto' mode."
+    },
+
+    "stop_rapid_execution" :
+    {
+        "url" : "/rw/rapid/execution",
+	"method" : "POST",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" :
+        {
+        "stopmode" : {"required" : 1, "default_value" : "stop", "possible_values" : ["cycle", "instr", "stop", "qstop"], "description" : "Stop mode"},
+         "usetsp" : {"required" : 1, "default_value" : "normal", "possible_values" : ["normal", "alltsk"], "description" : "Use tsp"}
+         },
+        "default_params" : {"action" : "stop"},
+        "success_response" : 204,
+        "error_response" : [400],
+        "description" : "Stops a RAPID execution. The robot has to be in 'Auto' mode."
+    },
+
+    "start_rapid_execution_from_prod_entry" :
+    {
+        "url" : "/rw/rapid/execution",
+	"method" : "POST",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {"action" : "startprodentry"},
+        "success_response" : 204,
+        "error_response" : [400],
+        "description" : "Starts a RAPID execution from a production entry"
+    },
+
+    "reset_rapid_program_pointer_to_main" :
+    {
+        "url" : "/rw/rapid/execution",
+	"method" : "POST",
+	"expected_url_complement" : {},
+        "expected_url_params" : {},
+        "expected_data_params" : {},
+        "default_params" : {"action" : "resetpp"},
+        "success_response" : 204,
+        "error_response" : [400],
+        "description" : "Resets the program pointer (RAPID) to main procedure (PROC main). The robot has to be in 'Auto' mode."
+    }
+}
